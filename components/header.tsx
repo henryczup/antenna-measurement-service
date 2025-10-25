@@ -13,8 +13,7 @@ export const Header = () => {
           {[
             { label: "Problem", href: "#problem" },
             { label: "Solution", href: "#solution" },
-            { label: "Why It Matters", href: "#why-it-matters" },
-            { label: "Vision", href: "#vision" },
+            { label: "Benefits", href: "#why-it-matters" },
             { label: "Contact", href: "#contact" }
           ].map((item) => (
             <Link
@@ -26,9 +25,9 @@ export const Header = () => {
             </Link>
           ))}
         </nav>
-        <Link className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-base text-primary hover:text-primary/80" href="/#contact">
+        {/* <Link className="uppercase max-lg:hidden transition-colors ease-out duration-150 font-mono text-base text-primary hover:text-primary/80" href="/#contact">
           Join Waitlist
-        </Link>
+        </Link> */}
         <MobileMenu />
       </header>
     </div>

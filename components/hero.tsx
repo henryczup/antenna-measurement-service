@@ -17,12 +17,11 @@ export function Hero() {
 
       <div className="pb-16 mt-auto text-center relative z-10">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-sentient">
-          Reimagining Antenna Testing <br />
-          <i className="font-light">for the Cloud Era</i>
+          Antenna Measurement, <br />
+          <i className="font-light">On Demand.</i>
         </h1>
         <p className="font-mono text-sm sm:text-base text-foreground/60 text-balance mt-8 max-w-[640px] mx-auto">
-          Access professional-grade RF measurements without owning a chamber.
-          Upload your configuration, ship your prototype, and receive calibrated results online.
+           Get critical RF data without the high cost and long waits of traditional labs.
         </p>
 
         <div className="flex gap-4 justify-center mt-14 max-sm:flex-col max-sm:items-center">
@@ -32,11 +31,6 @@ export function Hero() {
               onMouseEnter={() => setHovering(true)}
               onMouseLeave={() => setHovering(false)}
             >
-              Join the Waitlist
-            </Button>
-          </Link>
-          <Link className="contents max-sm:hidden" href="/#contact">
-            <Button className="h-16 px-8 text-base bg-transparent border-primary/60 text-primary hover:bg-primary/10">
               Contact Us
             </Button>
           </Link>
@@ -46,11 +40,6 @@ export function Hero() {
               onMouseEnter={() => setHovering(true)}
               onMouseLeave={() => setHovering(false)}
             >
-              Join the Waitlist
-            </Button>
-          </Link>
-          <Link className="contents sm:hidden" href="/#contact">
-            <Button size="sm" className="bg-transparent border-primary/60 text-primary hover:bg-primary/10">
               Contact Us
             </Button>
           </Link>

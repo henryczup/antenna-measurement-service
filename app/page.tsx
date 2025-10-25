@@ -5,8 +5,8 @@ import { Hero } from "@/components/hero";
 import { TheProblem } from "@/components/the-problem";
 import { WhyItMatters } from "@/components/why-it-matters";
 import { Technology } from "@/components/technology";
-import { Vision } from "@/components/vision";
 import { ContactForm } from "@/components/contact-form";
+import { Footer } from "@/components/footer";
 import { Leva } from "leva";
 
 export default function Home() {
@@ -24,8 +24,8 @@ export default function Home() {
       <TheProblem />
       <WhyItMatters />
       <Technology />
-      <Vision />
       <ContactForm />
+      <Footer />
       <Leva hidden />
     </>
   );

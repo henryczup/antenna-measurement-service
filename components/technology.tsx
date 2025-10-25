@@ -1,60 +1,78 @@
 "use client";
 
-import { Clock, DollarSign, Database } from "lucide-react";
+import { Zap, DollarSign, Radio, ShieldCheck } from "lucide-react";
+import { AnimatedSection } from "./animated-section";
 
 const benefits = [
   {
-    icon: Clock,
-    title: "Faster time-to-market",
+    icon: Zap,
+    title: "Move Faster",
     description:
-      "Skip procurement, setup, and staffing. Get your testing done quickly without the overhead of building your own infrastructure.",
+      "Get measurement data in days, not months. Integrate testing into your design cycle with our simple API.",
   },
   {
     icon: DollarSign,
-    title: "Lower cost",
+    title: "Save Money",
     description:
-      "Pay for usage, not idle infrastructure. Eliminate the capital expense of owning and maintaining chambers that sit unused most of the time.",
+      "No capital investment. Convert high fixed costs into a predictable operational expense.",
   },
   {
-    icon: Database,
-    title: "Data-driven insights",
+    icon: Radio,
+    title: "Access the Best Equipment",
     description:
-      "Standardized measurements enable AI-based optimization over time. The global anechoic-chamber market could exceed $1.5B by 2025, driven by 5G and connected-device testing demand.",
+      "Use professional-grade, 5G/6G-ready chambers and instrumentation.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Test with Confidence",
+    description:
+      "Get calibrated, standardized, and fully reproducible results every time.",
   },
 ];
 
 export function Technology() {
   return (
     <section id="why-it-matters" className="relative z-10 py-32 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-sentient mb-4">
-            Why It Matters
-          </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto font-mono">
-            Transform how you approach antenna testing
-          </p>
-        </div>
+      <AnimatedSection delay={0.1}>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-sentient mb-4">
+              Benefits
+            </h2>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="relative h-full rounded-3xl border border-white/10 bg-white/5 p-10 md:p-12 transition duration-300 hover:border-primary/60 hover:bg-white/10"
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/20 text-primary mb-6">
-                  <benefit.icon className="size-6" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative transition duration-300 hover:border-primary/60"
+              >
+                {/* Background with blur effect */}
+                <div
+                  className="absolute inset-0 rounded-2xl"
+                  style={{
+                    background: "rgba(231, 236, 235, 0.08)",
+                    backdropFilter: "blur(4px)",
+                    WebkitBackdropFilter: "blur(4px)",
+                  }}
+                />
+                {/* Additional subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl" />
+                
+                <div className="self-stretch p-10 md:p-12 flex flex-col items-center text-center relative z-10">
+                  <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/20 text-primary mb-6">
+                    <benefit.icon className="size-6" />
+                  </div>
+                  <h3 className="text-2xl font-sentient text-white mb-4">{benefit.title}</h3>
+                  <p className="text-lg text-white/70 leading-relaxed font-mono">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-sentient text-white mb-4">{benefit.title}</h3>
-                <p className="text-lg text-white/70 leading-relaxed font-mono">
-                  {benefit.description}
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 }
