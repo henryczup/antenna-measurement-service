@@ -42,7 +42,7 @@ export function WhyItMatters() {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative transition duration-300 hover:border-primary/60"
+                className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative"
               >
                 {/* Background with blur effect */}
                 <div

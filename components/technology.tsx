@@ -17,12 +17,6 @@ const benefits = [
       "No capital investment. Convert high fixed costs into a predictable operational expense.",
   },
   {
-    icon: Radio,
-    title: "Access the Best Equipment",
-    description:
-      "Use professional-grade, 5G/6G-ready chambers and instrumentation.",
-  },
-  {
     icon: ShieldCheck,
     title: "Test with Confidence",
     description:
@@ -41,11 +35,11 @@ export function Technology() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative transition duration-300 hover:border-primary/60"
+                className="overflow-hidden rounded-2xl border border-white/20 flex flex-col justify-start items-start relative"
               >
                 {/* Background with blur effect */}
                 <div

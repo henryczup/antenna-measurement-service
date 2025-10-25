@@ -10,9 +10,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skal Ventures",
-  description: "Investment strategies that outperform the market",
-    generator: 'v0.app'
+  title: "Antenna Measurement Service",
+  description: "On-demand antenna measurement service",
 };
 
 export default function RootLayout({

@@ -178,7 +178,7 @@ export function ContactForm() {
   return (
     <section id="contact" className="relative z-10 py-32 px-6 bg-background overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 top-[-150px]">
+      <div className="absolute inset-0 top-[-150px] pointer-events-none">
         <svg
           className="w-full h-full"
           viewBox="0 0 1388 825"
@@ -339,7 +339,7 @@ export function ContactForm() {
 
             <div className="flex gap-4">
               <Button type="submit" className="flex-1 h-14 text-base">
-                Join the Waitlist
+                Submit
               </Button>
             </div>
 
